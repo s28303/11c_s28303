@@ -1,5 +1,7 @@
 import math
 
+from square_generator import SquareGenerator
+
 squares = [i ** 2 for i in range(1, 11)]
 print(squares)
 
@@ -9,14 +11,6 @@ def generate_squares(start, end):
 
 
 print(generate_squares(1, 10))
-
-
-class SquareGenerator:
-    def generate(self, start, end):
-        if end < start:
-            raise Exception("Exception: end value should be >= than start")
-        return [i ** 2 for i in range(start, end + 1)]
-
 
 sg = SquareGenerator()
 sg_squares = sg.generate(1, 10)

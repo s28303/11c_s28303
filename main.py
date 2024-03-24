@@ -26,11 +26,13 @@ except Exception as e:
 
 
 class CubicGenerator(SquareGenerator):
-    def generate_cubs(self, start, end):
+    def generate(self, start, end):
+        if end < start:
+            raise Exception("Exception: end value should be >= than start")
         return [i ** 3 for i in range(start, end + 1)]
 
 
 cg = CubicGenerator()
-cg_cubes = cg.generate_cubs(1, 10)
+cg_cubes = cg.generate(1, 10)
 
 print(cg_cubes)

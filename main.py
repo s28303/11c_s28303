@@ -23,3 +23,14 @@ try:
     sg_squares_exception = sg.generate(10, 1)
 except Exception as e:
     print(e)
+
+
+class CubicGenerator(SquareGenerator):
+    def generate_cubs(self, start, end):
+        return [i ** 3 for i in range(start, end + 1)]
+
+
+cg = CubicGenerator()
+cg_cubes = cg.generate_cubs(1, 10)
+
+print(cg_cubes)

@@ -13,6 +13,8 @@ print(generate_squares(1, 10))
 
 class SquareGenerator:
     def generate(self, start, end):
+        if end < start:
+            raise Exception("Exception: end value should be >= than start")
         return [i ** 2 for i in range(start, end + 1)]
 
 
@@ -22,3 +24,8 @@ print(sg_squares)
 
 roots = [math.sqrt(i) for i in sg_squares]
 print(roots)
+
+try:
+    sg_squares_exception = sg.generate(10, 1)
+except Exception as e:
+    print(e)

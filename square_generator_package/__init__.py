@@ -1,1 +1,2 @@
 from .square_generator import SquareGenerator
+from .square_generator import AbstractSquareGenerator

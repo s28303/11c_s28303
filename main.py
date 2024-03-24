@@ -1,3 +1,5 @@
+import math
+
 squares = [i ** 2 for i in range(1, 11)]
 print(squares)
 
@@ -15,4 +17,8 @@ class SquareGenerator:
 
 
 sg = SquareGenerator()
-print(sg.generate(1, 10))
+sg_squares = sg.generate(1, 10)
+print(sg_squares)
+
+roots = [math.sqrt(i) for i in sg_squares]
+print(roots)
